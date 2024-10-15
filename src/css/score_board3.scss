@@ -1,0 +1,49 @@
+.table {
+
+
+    .table-header {
+        font-weight: bold;
+        text-align: center;
+    }
+    .table-body, .table-header {
+        display: flex;
+        flex-direction: column;
+
+
+        .row {
+            display: flex;
+            flex-direction: row;
+
+
+
+            .col {
+                width: 20vw;
+
+                &:nth-child(1) {
+                    background: red;
+                }
+                &:nth-child(2) {
+                    background: blue;
+                }
+                &:nth-child(3) {
+                    background: green;
+                }
+
+            }
+        }
+
+    }
+}
+
+/*
+.table-container {
+    max-height: 200px;
+    overflow: auto;
+}
+
+.sticky {
+    position: sticky !important;
+    top: 0;
+
+    z-index: 1;
+}*/
