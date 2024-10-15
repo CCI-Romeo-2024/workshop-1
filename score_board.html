@@ -2,9 +2,84 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tableau des Scores</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/score_board.scss">
 </head>
 <body>
+    <header>
+        <h1 class="title degrade">Arcad'ia</h1>
+    </header>
+    <main>
+        <div class="table_score">
+            <table id="sorted">
+                <thead class="sticky">
+                    <tr>
+                        <th id="rank">Place</th>
+                        <th id="name">Nom</th>
+                        <th id="score">Score</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr data-id="34324235523523">
+                        <td headers="rank">1 ST</td>
+                        <td headers="name">Sacha</td>
+                        <td headers="score" data-score="3"></td>
+                    </tr>
+                    <tr data-id="3456432">
+                        <td headers="rank">2 ND</td>
+                        <td headers="name">correge</td>
+                        <td headers="score" data-score="3972"></td>
+                    </tr>
+                    <tr data-id="276254165">
+                        <td headers="rank">3 RD</td>
+                        <td headers="name">romeo</td>
+                        <td headers="score" data-score="538"></td>
+                    </tr>
+                    <tr data-id="4564325643">
+                        <td headers="rank">4 TH</td>
+                        <td headers="name">bastien</td>
+                        <td headers="score" data-score="0"></td>
+                    </tr>
+                    <tr data-id="5364758654">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">frank</td>
+                        <td headers="score" data-score="187"></td>
+                    </tr>
+                    <tr data-id="235467843">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">Ethan</td>
+                        <td headers="score" data-score="1"></td>
+                    </tr>
+                    <tr data-id="235467843">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">Norman</td>
+                        <td headers="score" data-score="2"></td>
+                    </tr>
+                    <tr data-id="235467843">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">Child</td>
+                        <td headers="score" data-score="345"></td>
+                    </tr>
+                    <tr data-id="235467843">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">Zizou</td>
+                        <td headers="score" data-score="23"></td>
+                    </tr>
+                    <tr data-id="235467843">
+                        <td headers="rank">5 TH</td>
+                        <td headers="name">Sami</td>
+                        <td headers="score" data-score="123"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
+
+    <script src="src/js/score_board.js"></script>
 </body>
 </html>

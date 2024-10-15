@@ -1,0 +1,43 @@
+table td{
+    color: white;
+}
+
+main{
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+table {
+    
+    width: 80vw;
+}
+
+td{
+    border: 1px solid white;
+    padding: 30px 120px;
+    font-size: 2.6em;
+}
+.zoneSaisie{
+    padding: 15px 40px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+
+thead{
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+.tableWrap{
+    overflow: auto;
+    height: 61vh;
+    margin-top: 65px;
+}

@@ -12,6 +12,7 @@
 :root {
     --color-primary: #EADA81;
     --color-secondary: #E5227D;
+    --white: #ffffff;
 }
 
 
@@ -26,7 +27,14 @@ body {
 
 
 .degrade {
-    background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.title {
+    font-size: 6em;
+    text-align: center;
+    margin: 100px;
+    text-transform: uppercase;
 }

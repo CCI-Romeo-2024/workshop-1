@@ -18,11 +18,12 @@
     <main>
         <form id="register-form">
             <div class="form-group pseudonyme">
+                <span  id="arrow-pseudo" class="degrade arrow">&rsaquo;</span>
                 <label class="degrade"  for="pseudonyme">Pseudonyme : </label>
                 <input type="text" id="pseudonyme" name="pseudonyme" required value="player 1">
             </div>
             <div class="form-group age">
-                <label  class="degrade" for="age">Age : </label>
+                <label class="degrade" for="age">Age : </label>
                 <input type="number" id="age" name="age" required value="10" maxlength="3" max="100">
                 <span class="span-ans">ans</span>
             </div>
@@ -30,13 +31,25 @@
 
             <div class="start-group">
                 <button id="register-btn">
-                    <span id="left" class="degrade">&rsaquo;</span>
+                    <span id="left" class="degrade arrow">&rsaquo;</span>
                     <span class="degrade">START</span>
-                    <span id="right" class="degrade">&lsaquo;</span>
+                    <span id="right" class="degrade arrow">&lsaquo;</span>
                 </button>
             </div>
         </form>
     </main>
+
+    <footer>
+        <h2>&#xA9; 2024 L'école by cci dnmade 1</h2>
+        <div class="credit-group">
+            <p>crédit &nbsp;:</p>
+            <span class="degrade">10</span>
+        
+        </div>
+        
+    </footer>
+
+
 
     <script src="src/js/register.js" type="module"></script>
 </body>

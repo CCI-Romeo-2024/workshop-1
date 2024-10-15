@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/admin.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="degrade title">Admin</h1>
+    </header>
+    <main>
+    
+        
+        <input class="zoneSaisie" type="text" placeholder="Search Name" id="maRecherche" onkeyup="filtrer()" autocomplete="off">
+        <div class="tableWrap">
+        <table class="tableau" id="tableau">
+            <thead>
+                <tr>
+                    <td>RANK</td>
+                    <td>NAME</td>
+                    <td>SCORE</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 ST</td>
+                    <td class="name">SACHA</td>
+                    <td>50004</td>
+                </tr>
+                <tr>
+                    <td>2 ND</td>
+                    <td class="name">CORREGE</td>
+                    <td>48600</td>
+                </tr>
+                <tr>
+                    <td>3 RD</td>
+                    <td class="name">ROMEO</td>
+                    <td>42500</td>
+                </tr>
+                <tr>
+                    <td>4 TH</td>
+                    <td class="name">BASTIEN</td>
+                    <td>40500</td>
+                </tr>
+                <tr>
+                    <td>5 TH</td>
+                    <td class="name">FRANK</td>
+                    <td>39500</td>
+                </tr>
+                <tr>
+                    <td>6 TH</td>
+                    <td class="name">ETHAN</td>
+                    <td>37500</td>
+                </tr>
+                <tr><td>7 TH</td>
+                    <td class="name">FRED</td>
+                    <td>35500</td>
+                </tr>
+                <tr>
+                    <td>8 TH</td>
+                    <td class="name">SEB</td>
+                    <td>32500</td>
+                </tr>
+                <tr>
+                    <td>9 TH</td>
+                    <td class="name">MBAPPE</td>
+                    <td>22500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </main>
+</body>
+
+
+<script src="src/js/admin.js"></script>
+
+</html>

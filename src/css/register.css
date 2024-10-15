@@ -1,10 +1,3 @@
-.title {
-    font-size: 5em;
-    text-align: center;
-    margin: 100px;
-}
-
-
 .form-group label{
     font-size: 2em;
     width: 30vw;
@@ -13,8 +6,10 @@
 .form-group input{
     display: block;
     font-size: 2em;
-    color: white;
+    color: var(--white);
     width: 55vw;
+    caret-color: white;
+
 }
 
 .form .age {
@@ -24,14 +19,26 @@
 .span-ans {
     position: absolute;
     font-size: 2em;
-    color: white;
-    right: 45vw;
+    color: var(--white);
+    right: 52vw;
 }
 
 .form-group {
     display: flex;
     margin-top: 125px;
 }
+
+#arrow-pseudo{
+    font-size: 2.3em;
+    margin-right: 25px;
+    display: none;
+}
+
+ input:focus, label > #arrow-pseudo{
+    font-size: 2.3em;
+    margin-right: 25px;
+}
+
 
 form{
     display: flex;
@@ -42,10 +49,34 @@ form{
     width: 100vw;
 }
 
+h2{
+ color: var(--white);
+ text-align: center;
+ margin-top: 50px;
+ font-size: 1.45em;
+}
 
+p{
+    color: white;
+}
+
+
+.credit-group{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    left: 20px;
+    bottom: 20px;
+    font-size: 1.3em;
+}
+
+.credit-group span{
+    margin-left: 40px;
+}
 
 .start-group {
-    margin-top: 100px;
+    margin-top: 160px;
 }
 
 .start-group span{
@@ -70,18 +101,52 @@ input[type=number] {
 }
 
 
+#register-btn {
+    cursor: pointer;
+}
 
-#left :hover{
-    transform: translateX(45px);
+#left {
+    margin-right: 100px;
+    animation: arrowanimleft 1s step-end infinite;
+}
+
+#right {
+    margin-left: 100px;
+    animation: arrowanimright 1s step-end infinite ;
+}
+
+#register-btn:hover > #left {
+    margin-right: 0px !important;
+}
+
+#register-btn:hover > #right {
+    margin-left: 0px !important;
 }
 
 
-/*
-@keyframes arrowanim{
+
+
+@keyframes arrowanimleft{
     0%{
-        transform: translateX(0%);
+        margin-right: 100px;
+    }
+    50%{
+        margin-right: 0px;
     }
     100%{
-        transform: translateX(100%);
+        margin-right: 100px;
     }
-}*/
+}
+
+
+@keyframes arrowanimright{
+    0%{
+        margin-left: 100px;
+    }
+    50%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 100px;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/score_board2.scss">
+</head>
+<body>
+<header>
+    <h1 class="title degrade">Arcad'ia</h1>
+</header>
+<main>
+    <div class="table-container">
+        <div class="table">
+            <div class="table-header">
+                <div class="row">
+                    <div class="col">Rank</div>
+                    <div class="col">Name</div>
+                    <div class="col" id="score">Score</div>
+                </div>
+            </div>
+            <div class="table-body" id="table-body">
+                <!-- Les lignes seront générées dynamiquement -->
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="src/js/score_board2.js"></script>
+</body>
+</html>

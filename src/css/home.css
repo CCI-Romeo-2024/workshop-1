@@ -1,0 +1,26 @@
+#app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+}
+
+
+a {
+    font-size: 3em;
+    color: white;
+
+    transition: 1s ease-in-out;
+
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
