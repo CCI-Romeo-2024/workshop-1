@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inscription</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="src/css/register.css">
+
+
+</head>
+<body>
+    <header>
+        <h1 class="degrade title">INSCRIPTION</h1>
+    </header>
+    <main>
+        <form id="register-form">
+            <div class="form-group pseudonyme">
+                <label class="degrade"  for="pseudonyme">Pseudonyme : </label>
+                <input type="text" id="pseudonyme" name="pseudonyme" required value="player 1">
+            </div>
+            <div class="form-group age">
+                <label  class="degrade" for="age">Age : </label>
+                <input type="number" id="age" name="age" required value="10" maxlength="3" max="100">
+                <span class="span-ans">ans</span>
+            </div>
+
+
+            <div class="start-group">
+                <button id="register-btn">
+                    <span id="left" class="degrade">&rsaquo;</span>
+                    <span class="degrade">START</span>
+                    <span id="right" class="degrade">&lsaquo;</span>
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script src="src/js/register.js" type="module"></script>
+</body>
+</html>
+

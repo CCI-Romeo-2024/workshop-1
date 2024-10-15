@@ -1,0 +1,87 @@
+.title {
+    font-size: 5em;
+    text-align: center;
+    margin: 100px;
+}
+
+
+.form-group label{
+    font-size: 2em;
+    width: 30vw;
+}
+
+.form-group input{
+    display: block;
+    font-size: 2em;
+    color: white;
+    width: 55vw;
+}
+
+.form .age {
+    position: relative;
+}
+
+.span-ans {
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    right: 45vw;
+}
+
+.form-group {
+    display: flex;
+    margin-top: 125px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    align-items: center;
+
+    width: 100vw;
+}
+
+
+
+.start-group {
+    margin-top: 100px;
+}
+
+.start-group span{
+    font-size: 4em;
+}
+
+
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+#left :hover{
+    transform: translateX(45px);
+}
+
+
+/*
+@keyframes arrowanim{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}*/

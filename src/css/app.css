@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #EADA81;
+    --color-secondary: #E5227D;
+}
+
+
+body {
+    background-color: black !important;
+    background-image: url('../../assets/img/background.jpg');
+
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.degrade {
+    background: -webkit-linear-gradient(var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
