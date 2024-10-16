@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inscription</title>
 
+    
     <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="src/css/app.css">
     <link rel="stylesheet" href="src/css/register.css">
+    
 
 
 </head>
@@ -18,15 +21,23 @@
     <main>
         <form id="register-form">
             <div class="form-group pseudonyme">
-                <span  id="arrow-pseudo" class="degrade arrow">&rsaquo;</span>
+                <span  class="arrow-pseudo degrade arrow">&rsaquo;</span>
                 <label class="degrade"  for="pseudonyme">Pseudonyme : </label>
-                <input type="text" id="pseudonyme" name="pseudonyme" required value="player 1">
+                <input type="text" id="textInput" id="pseudonyme" name="pseudonyme" placeholder="Player Name...">
             </div>
-            <div class="form-group age">
-                <label class="degrade" for="age">Age : </label>
-                <input type="number" id="age" name="age" required value="10" maxlength="3" max="100">
-                <span class="span-ans">ans</span>
-            </div>
+
+            <section class="splide" aria-labelledby="carousel-heading">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide"><img src="assets/img/consoles/GAMECUBE.png" alt=""></li>
+                          <li class="splide__slide"><img src="assets/img/consoles/SNES.png" alt=""></li>
+                          <li class="splide__slide"><img src="assets/img/consoles/NES.png" alt=""></li>
+                          <li class="splide__slide"><img src="assets/img/consoles/WII.png" alt=""></li>
+                          <li class="splide__slide"><img src="assets/img/consoles/SWITCH.png" alt=""></li>
+                      </ul>
+                </div>
+              </section>
+
 
 
             <div class="start-group">
@@ -37,6 +48,7 @@
                 </button>
             </div>
         </form>
+
     </main>
 
     <footer>
@@ -49,9 +61,14 @@
         
     </footer>
 
+    <div class="background"> 
+        <img id="lineLeft" src="assets/img/line.svg" alt="">
+        <img id="lineRight" src="assets/img/line.svg" alt="">
+    </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="src/js/register.js" type="module"></script>
+    
 </body>
 </html>
 

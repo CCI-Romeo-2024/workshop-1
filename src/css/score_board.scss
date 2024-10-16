@@ -1,82 +1,142 @@
 :root {
-
+    --table-title: #87CCDE;
 }
 
-main {
-    color: var(--white);
+.table-container {
+    margin-top: 100px;
+
     display: flex;
     flex-direction: column;
+
     align-items: center;
 
-    .table_score {
-        // overflow: auto;
-        // max-height: 30vh;
+    .table {
+        display: flex;
+        flex-direction: column;
 
-        table {
-            border-spacing: 0;
-            text-align: center;
-            width: 80vw;
+        gap: 50px;
 
-            font-size: 2em;
+        .table-body, .table-header {
+            display: flex;
+            flex-direction: column;
 
-            .sticky {
-                position: sticky;
-                top: 0;
+            gap: 40px;
+
+            .st > .col {
+                background: -webkit-linear-gradient(180deg, #E3CF3C, #E48039, #E63636) !important;
+                -webkit-background-clip: text !important;
+                -webkit-text-fill-color: transparent !important;
             }
 
-            thead {
-
-
-                th {
-                    text-align: center;
-                    padding: 0.2em;
-
-                    width: calc(80vw / 3);
-
-                    cursor: pointer;
-                }
+            .nd > .col {
+                background: -webkit-linear-gradient(180deg, #5B3ED2, #CB33D6, #4CD2DB) !important;
+                -webkit-background-clip: text !important;
+                -webkit-text-fill-color: transparent !important;
             }
-            tbody {
-                tr {
-                    transition: transform 1s;
-                    transition-timing-function: ease-in-out;
-                    transform: translateY(0px);
-                }
 
-                td {
-                    padding: 0.2em;
-                    width: calc(80vw / 3);
+            .rd > .col {
+                background: -webkit-linear-gradient(180deg, #55DA40, #3E8BDE, #F7EB3B) !important;
+                -webkit-background-clip: text !important;
+                -webkit-text-fill-color: transparent !important;
+            }
 
-                    border-width: 1px 0 1px 0;
+            .row {
+                display: flex;
+                flex-direction: row;
 
-                    &[headers='rank'] {
-                        display: flex;
-                        justify-content: center;
+                color: white;
 
+                font-size: 1.8em;
+
+                gap: 10vw;
+
+                .col {
+                    width: 15vw;
+
+                    &:nth-child(1) { // col rank
                         div {
                             display: flex;
                             justify-content: space-between;
-                            width: 100px;
-
+                            width: 7vw;
                         }
                     }
-                    &[headers='name'] {
-                        text-align: left;
+                    &:nth-child(2) { // col Name
+                        text-overflow: clip;
+                        white-space: nowrap;
                     }
+                    &:nth-child(3) { // col Score
 
-                    &[headers='score'] {
-                        text-align: left;
                     }
                 }
             }
+
+        }
+        .table-header {
+             .row {
+                 font-size: 2.2em;
+                 color: var(--table-title);
+
+                 text-transform: uppercase;
+             }
+        }
+
+        .table-body {
+            height: calc((30px * 10) + (40px * 9.5));
+
+            overflow: hidden;
         }
     }
 }
 
+.notif {
+    position: absolute;
+
+    opacity: 0;
+    top: -90px;
+    left: 10px;
 
 
+    height: 90px;
+    width: calc((588/104) * 90px);
 
-tr {
-    text-transform: uppercase;
-    height:1.75em;
+    background-image: url("/assets/img/scoreboard/notif-bg.png");
+    background-size: cover;
+
+
+    color: var(--white);
+
+    padding: 10px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+
+    img {
+        width: 40px;
+        aspect-ratio: 1 / 1;
+
+        object-fit: contain;
+    }
+    .text {
+        font-size: 0.9em;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    transition: all .2s ease-in-out;
+}
+
+
+.notif-active {
+    opacity: 1;
+    top: 10px
+}
+
+.notif-end {
+    opacity: 0;
+    top: 100px
 }

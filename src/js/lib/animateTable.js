@@ -1,4 +1,4 @@
-class animateTable {
+export class animateTable {
     constructor(tableSelector, rowSelector, anim) {
         this.boxes = []
         this.tableSelector = tableSelector

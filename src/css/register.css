@@ -1,19 +1,19 @@
 .form-group label{
     font-size: 2em;
-    width: 30vw;
+    width: 23vw;
 }
 
 .form-group input{
     display: block;
     font-size: 2em;
     color: var(--white);
-    width: 55vw;
+    width: 21vw;
     caret-color: white;
 
 }
 
-.form .age {
-    position: relative;
+input:focus::placeholder {
+    color: transparent;
 }
 
 .span-ans {
@@ -25,18 +25,20 @@
 
 .form-group {
     display: flex;
-    margin-top: 125px;
+    margin-top: 83px;
 }
 
-#arrow-pseudo{
-    font-size: 2.3em;
-    margin-right: 25px;
+.arrow-pseudo{
+    position: absolute;
+    top: 29.2%;
+    left: 485px;
+    transform: translate(-100%, -50%); 
     display: none;
+    font-size: 40px;
 }
 
- input:focus, label > #arrow-pseudo{
-    font-size: 2.3em;
-    margin-right: 25px;
+.show-arrow{
+    display: inline;
 }
 
 
@@ -66,7 +68,7 @@ p{
     display: flex;
     width: 100vw;
     align-items: center;
-    left: 20px;
+    left: 360px;
     bottom: 20px;
     font-size: 1.3em;
 }
@@ -76,7 +78,7 @@ p{
 }
 
 .start-group {
-    margin-top: 160px;
+    margin-top: 570px;
 }
 
 .start-group span{
@@ -85,6 +87,56 @@ p{
 
 
 
+.background img{
+    width: 100vw;
+}
+
+#lineLeft{
+    position: absolute;
+    transform: rotate(90deg);
+    right: 879px;
+    bottom: 170px;
+}
+
+#lineRight{
+    position: absolute;
+    transform: rotate(270deg);
+    left: 879px;
+    bottom: 100px;
+}
+
+
+
+li img{
+    width: 35%;
+    margin-left:32.4% ;
+}
+
+
+.splide .splide__arrow {
+    background: transparent;
+}
+
+.splide .splide__arrow svg{
+    fill: #ED6775;
+    width: 70%;
+    height: 70%;
+}
+
+.splide .splide__arrow{
+    width: 1300px;
+    height: 220px;
+}
+
+
+.splide{
+    position: absolute;
+    margin-top: 305px;
+}
+
+section{
+
+}
 
 
 
