@@ -9,23 +9,25 @@ main{
     flex-direction: column;
     align-items: center;
 
-
-
 }
 
 table {
-    
     width: 80vw;
 }
 
 td{
     border: 1px solid white;
-    padding: 30px 120px;
-    font-size: 2.6em;
+    padding: 1.5vh 3vw;
+    font-size: 1em;
+
+}
+
+.add-btn {
+    width: 5vw;
 }
 .zoneSaisie{
-    padding: 15px 40px;
-    font-size: 1.6em;
+    padding: 1vh 3vw;
+    font-size: 1em;
     text-align: center;
 }
 
@@ -36,8 +38,20 @@ thead{
     background-color: black;
 }
 
+tbody {
+    gap: 0;
+}
+
+.add-btn > button{
+    width: 100%;
+}
+
 .tableWrap{
     overflow: auto;
-    height: 61vh;
+    height: 63dvh;
     margin-top: 65px;
+}
+
+.title {
+    font-size: 2em;
 }

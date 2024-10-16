@@ -3,27 +3,15 @@
 
 import { animateTable } from "./lib/animateTable.js";
 import { db } from "./lib/supaBase.js";
-import notifSound from '../../assets/sounds/notification.mp3'
 
+import notifSound from '../../assets/sounds/notification.mp3'
+import gamecubeImg from '../../assets/img/consoles_preview/GAMECUBE.png'
+import nesImg from  '../../assets/img/consoles_preview/NES.png'
+import snesImg from  '../../assets/img/consoles_preview/SNES.png'
+import wiiImg from  '../../assets/img/consoles_preview/WII.png'
+import switchImg from  '../../assets/img/consoles_preview/SWITCH.png'
 
 const scoreBoard = []
-
-/*let defaultData = [
-    {id: 14, name: 'Lucas', score: 9000},
-    {id: 6, name: 'Olivia', score: 76543},
-    {id: 7, name: 'Ava', score: 65432},
-    {id: 2, name: 'Romeo', score: 234532},
-    {id: 3, name: 'Correge', score: 123456},
-    {id: 4, name: 'Mia', score: 34},
-    {id: 1, name: 'Sacha', score: 43220},
-    {id: 5, name: 'Liam', score: 87654},
-    {id: 8, name: 'Noah', score: 54321},
-    {id: 9, name: 'Sophia', score: 43210},
-    {id: 10, name: 'James', score: 32109},
-    {id: 11, name: 'William', score: 21000},
-    {id: 12, name: 'Emma', score: 15000},
-    {id: 13, name: 'Benjamin', score: 12000}
-];*/
 
 const ranks = [
     '<div><span>1</span><span>ST</span></div>',
@@ -38,11 +26,6 @@ const ranks = [
     '<div><span>10</span><span>TH</span></div>'
 ];
 
-import gamecubeImg from '../../assets/img/consoles_preview/GAMECUBE.png'
-import nesImg from  '../../assets/img/consoles_preview/NES.png'
-import snesImg from  '../../assets/img/consoles_preview/SNES.png'
-import wiiImg from  '../../assets/img/consoles_preview/WII.png'
-import switchImg from  '../../assets/img/consoles_preview/SWITCH.png'
 const avatar = {
     0: gamecubeImg,
     1: nesImg,
@@ -242,14 +225,6 @@ const dbEvents = db
 //
 // }, 1000)
 
-
-
-//
-// setTimeout(() => {
-//     newNotif({id: 1, pseudo: 'Nico', score: 0, avatar: 0})
-//
-//
-// }, 1000)
 
 
 /*

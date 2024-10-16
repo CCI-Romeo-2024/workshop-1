@@ -1,6 +1,6 @@
 # TODO
 
-- inscription
+- inscription -> get good avatar
 
 
 ## Fix

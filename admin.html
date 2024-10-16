@@ -2,42 +2,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="src/css/app.css">
-    <link rel="stylesheet" href="src/css/admin.css">
-</head>
+    <title>ARCAD'IA - Admin</title>
 
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/app.css">
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        header {
+            margin-top: 5vh;
+        }
+        main {
+            margin-top: 10vh;
+
+            /*height: 100vh;*/
+        }
+        form {
+            font-size: 1.4em;
+            display: flex;
+            flex-direction: column;
+
+            width: 80vw;
+
+            max-width: 900px;
+
+            gap: 100px;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+
+            gap: 30px;
+        }
+
+        label {
+            font-size: 1.4em;
+            color: white;
+
+        }
+
+        input {
+            height: 100px;
+            padding: 0 1.8vw;
+
+            background: white;
+
+            border: 1px solid grey;
+            border-radius: 10px;
+
+        }
+
+        input:focus::placeholder {
+            color: gray;
+        }
+
+        input[type="submit"] {
+            text-align: center;
+
+            align-self: center;
+
+            width: 70%;
+
+            margin-top: 100px;
+
+            cursor: pointer;
+        }
+
+    </style>
+</head>
 <body>
     <header>
-        <h1 class="degrade title">Admin</h1>
+        <h1 class="title degrade">Login</h1>
     </header>
     <main>
-    
-        
-        <input class="zoneSaisie" type="text" placeholder="Search Name" id="maRecherche" onkeyup="filtrer()" autocomplete="off">
-        <div class="tableWrap">
-        <table class="tableau" id="tableau">
-            <thead>
-                <tr>
-                    <td>RANK</td>
-                    <td>NAME</td>
-                    <td>SCORE</td>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-                <tr>
-                    <td>1 ST</td>
-                    <td class="name">SACHA</td>
-                    <td>50004</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+        <form id="form-login">
+            <fieldset>
+                <label for="identifiant">Identifiant</label>
+                <input type="text" name="identifiant" id="identifiant" autocomplete="off" placeholder="Identifiant">
+            </fieldset>
+
+            <fieldset>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </fieldset>
+
+            <input type="submit" id="submit">
+        </form>
     </main>
+
+
+    <script>
+
+        if (localStorage.getItem('logged')) window.location.href = "admin_hidden.html"
+
+        document.getElementById('form-login')
+            .addEventListener('submit', (e) => {
+                e.preventDefault()
+
+                console.log()
+
+                if (e.target.identifiant.value === "admin" && e.target.password.value === "cci") {
+                    localStorage.setItem('logged', 'true')
+
+                    window.location.href = "admin_hidden.html"
+                }
+            })
+
+    </script>
 </body>
-
-
-<script src="src/js/admin.js"></script>
-
 </html>
