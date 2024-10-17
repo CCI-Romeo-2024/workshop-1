@@ -5,6 +5,7 @@ import { animateTable } from "./lib/animateTable.js";
 import { db } from "./lib/supaBase.js";
 
 import notifSound from '../../assets/sounds/notification.mp3'
+
 import gamecubeImg from '../../assets/img/consoles_preview/GAMECUBE.png'
 import nesImg from  '../../assets/img/consoles_preview/NES.png'
 import snesImg from  '../../assets/img/consoles_preview/SNES.png'

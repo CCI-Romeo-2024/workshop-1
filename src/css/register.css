@@ -30,7 +30,7 @@ input:focus::placeholder {
 
 .arrow-pseudo{
     position: absolute;
-    top: 32.2%;
+    top: 31.1%;
     left: 790px;
     transform: translate(-100%, -50%); 
     display: none;
@@ -104,7 +104,7 @@ h3{
     position: absolute;
     transform: rotate(90deg);
     right: 1120px;
-    bottom: 170px;
+    bottom: 220px;
 }
 
 #lineRight{

@@ -1,5 +1,9 @@
 import { db } from './lib/supaBase.js'
 
+import soundCharacter from '../../assets/sounds/change_character.mp3'
+import soundRegister from '../../assets/sounds/register.mp3'
+import soundZoomTv from '../../assets/sounds/zoom_tv.mp3'
+import soundBg from '../../assets/sounds/music_bg.mp3'
 
 const registerForm = document.getElementById('register-form');
 const registerBtn = document.getElementById('register-btn');
@@ -19,6 +23,9 @@ registerBtn.addEventListener('click', async (e) => {
 
     if (registerForm.pseudonyme.value.length === 0) return false;
 
+    let audio = new Audio(soundRegister);
+    audio.play();
+
     const { data, error } = await db
         .from('players')
         .insert([
@@ -37,16 +44,20 @@ registerBtn.addEventListener('click', async (e) => {
 })
 
 
-var splide = new Splide('.splide', {
+let splide = new Splide('.splide', {
     width: '100%',
     start: 0,
     perPage: 1,
     gap: '10px',
     pagination: false,
     type: 'loop',
-    //arrowPath: 'M32 112V96H48V80H64V64H80V48H64V32H48V16H32V0H-7.62939e-06V16H16V32H32V48H48V64H32V80H16V96H-7.62939e-06V112H32Z'
 });
 splide.mount();
+
+splide.on('move', () => {
+    let sound = new Audio(soundCharacter)
+    sound.play()
+})
 
 
 const input = document.getElementById('textInput');
@@ -65,12 +76,21 @@ input.addEventListener('blur', function () {
 
 
 document.querySelector('.loader').addEventListener('click', (e) => {
+    let sound = new Audio(soundZoomTv)
+    sound.play()
+
     e.target.classList.add('active');
 
     setTimeout(() => {
         e.target.classList.add('end');
-    }, 1500)
+    }, 600)
+
+
+    setTimeout(() => {
+        sound = new Audio(soundBg)
+        sound.play()
+    }, 4000)
+
 })
 
-// splide.get
 
