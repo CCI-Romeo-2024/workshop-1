@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARCAD'IA - Test</title>
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/app.css">
+
+    <style>
+        .loader {
+            position: absolute;
+            z-index: 99;
+
+            top: 0;
+            left: 0;
+
+            width: 100vw;
+            height: 100vh;
+
+            /*background-image: url("./assets/img/ACCUEIL.png");*/
+            /*background-position: center;*/
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            cursor: url('./assets/cursor.png'), auto;
+            
+            animation: animTv 1s infinite;
+
+            transition: all ease 0.4s;
+            opacity: 1;
+        }
+
+        .loader:hover    {
+            transform: scale(5);
+            opacity: 0;
+
+        }
+        
+        @keyframes animTv {
+            from, to {
+                background-image: url("./assets/img/ACCUEIL.png");
+            }
+
+            50% {
+                background-image: url("./assets/img/ACCUEIL2.png"), url("./assets/img/ACCUEIL.png");
+            }
+        }
+
+        @keyframes zoomIn {
+            to {
+                transform: scale(2, 50);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+  <div class="loader">
+
+  </div>
+
+</body>
+</html>

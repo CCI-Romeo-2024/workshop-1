@@ -1,13 +1,13 @@
 .form-group label{
-    font-size: 2em;
+    font-size: 2.2em;
     width: 23vw;
 }
 
 .form-group input{
     display: block;
-    font-size: 2em;
+    font-size: 2.2em;
     color: var(--white);
-    width: 21vw;
+    width: 23.5vw;
     caret-color: white;
 
 }
@@ -30,8 +30,8 @@ input:focus::placeholder {
 
 .arrow-pseudo{
     position: absolute;
-    top: 29.2%;
-    left: 485px;
+    top: 25.7%;
+    left: 530px;
     transform: translate(-100%, -50%); 
     display: none;
     font-size: 40px;
@@ -63,12 +63,21 @@ p{
 }
 
 
+h3{
+    position: absolute;
+    text-align: center;
+    margin-top: 300px;
+    font-size: 1.75em;
+    color: #EAD581;
+}
+
+
 .credit-group{
     position: absolute;
     display: flex;
     width: 100vw;
     align-items: center;
-    left: 360px;
+    left: 310px;
     bottom: 20px;
     font-size: 1.3em;
 }
@@ -78,11 +87,11 @@ p{
 }
 
 .start-group {
-    margin-top: 570px;
+    margin-top: 540px;
 }
 
 .start-group span{
-    font-size: 4em;
+    font-size: 5.5em;
 }
 
 
@@ -108,34 +117,31 @@ p{
 
 
 li img{
-    width: 35%;
-    margin-left:32.4% ;
+    width: 650px;
+    margin-left:690px ;
+    
 }
 
 
 .splide .splide__arrow {
-    background: transparent;
+   background: transparent;
 }
 
-.splide .splide__arrow svg{
-    fill: #ED6775;
-    width: 70%;
-    height: 70%;
-}
 
 .splide .splide__arrow{
-    width: 1300px;
-    height: 220px;
+    width: 60px;
+    height: 80px;
+    margin-left: 480px;
+    margin-right: 480px;
+    color: #ED6775;
+    font-size: 200px;
+    opacity: 10;
 }
 
 
 .splide{
     position: absolute;
     margin-top: 305px;
-}
-
-section{
-
 }
 
 
@@ -200,5 +206,54 @@ input[type=number] {
     }
     100%{
         margin-left: 100px;
+    }
+}
+
+
+.loader {
+    position: absolute;
+    z-index: 99;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    cursor: url('../../assets/cursor.png'), auto;
+
+    animation: animTv 1s infinite;
+
+    transition: all ease 2s;
+
+    opacity: 1;
+}
+
+.loader.active    {
+    transform: scale(15);
+
+    opacity: 0;
+}
+
+.loader.end {
+    display: none;
+}
+
+@keyframes animTv {
+    from, to {
+        background-image: url("../../assets/img/ACCUEIL.png");
+    }
+
+    50% {
+        background-image: url("../../assets/img/ACCUEIL2.png"), url("../../assets/img/ACCUEIL.png");
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(2, 50);
     }
 }

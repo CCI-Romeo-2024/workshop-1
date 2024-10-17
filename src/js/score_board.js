@@ -28,14 +28,51 @@ const ranks = [
 
 const avatar = {
     0: gamecubeImg,
-    1: nesImg,
-    2: snesImg,
+    1: snesImg,
+    2: nesImg,
     3: wiiImg,
     4: switchImg
 }
 
+document.addEventListener('keypress', e => {
+    if (e.key.toLowerCase() === 'f')
+        toggleFullscreen()
+})
+
+function toggleFullscreen(elem) {
+    elem = elem || document.documentElement;
+    if (!document.fullscreenElement && !document.mozFullScreenElement &&
+        !document.webkitFullscreenElement && !document.msFullscreenElement) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+    }
+}
+
 const textes = [
-    'est dans la place !'
+    'est dans la place !',
+    'est là pour du fun !',
+    'est dans le game !',
+    'est prêt à jouer !',
+    'est là pour le défi !',
+    'est dans l\'arène !',
+    'est là pour le high score !'
 ]
 
 const newNotif = (user) => {
@@ -63,11 +100,25 @@ const newNotif = (user) => {
             setTimeout(() => {
                 el.remove()
             }, 200)
-        }, 1500)
+        }, 2000)
     }, 200)
 
 
+
+
+
+
 }
+
+/*// Create a SpeechSynthesisUtterance
+const utterance = new SpeechSynthesisUtterance("Welcome to this tutorial!");
+
+// Select a voice
+const voices = speechSynthesis.getVoices();
+utterance.voice = voices[1]; // Choose a specific voice
+
+// Speak the text
+speechSynthesis.speak(utterance);*/
 
 const tableAnimation = new animateTable('#table-body', '.row', Power1.easeInOut)
 

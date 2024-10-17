@@ -50,6 +50,8 @@ tbody {
     overflow: auto;
     height: 63dvh;
     margin-top: 65px;
+
+    touch-action: manipulation;
 }
 
 .title {

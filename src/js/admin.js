@@ -3,12 +3,13 @@ let scoreBoard = []
 
 const getRowHtml = (element) => {
     return `
-<tr id="table-${element.id}">
+<tr id="table-${element.id}" onclick="addPoints(${element.id})">
     <td class="name">${element.pseudo}</td>
     <td class="score">${element.score.toLocaleString('fr-FR')}</td>
-    <td class="add-btn"><button onclick="addPoints(${element.id}, 10)">add 10</button></td>
+    
 </tr>
 `
+    // <td class="add-btn"><button onclick="addPoints(${element.id}, 100)">add 100</button></td>
 }
 
 
@@ -61,11 +62,23 @@ const dbEvents = db
     .subscribe()
 
 
+function roundToNearestHundred(num) {
+    return Math.round(num / 100) * 100;
+}
 
-async function addPoints(id, points) {
+async function addPoints(id) {
     if (!localStorage.getItem('logged')) window.location.href = "admin.html"
+
+    const incrementsPoints = prompt('Nombre de point a rajouter ? (100, 2000, ...)')
+
+    if (!incrementsPoints.toLowerCase().replaceAll(' ', '').length) return
+
+    const points = roundToNearestHundred(parseInt(incrementsPoints))
+
+    if (points < 100) return
+
     const { data, error } = await db
-            .rpc('increment', { x: points, row_id: id })
+            .rpc('increment', { x: roundToNearestHundred(parseInt(incrementsPoints)), row_id: id })
 
 }
 
