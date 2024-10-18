@@ -3,18 +3,6 @@
     width: 18vw;
 }
 
-.form-group input{
-    display: block;
-    font-size: 2.2em;
-    color: var(--white);
-    width: 17.5vw;
-    caret-color: white;
-
-}
-
-input:focus::placeholder {
-    color: transparent;
-}
 
 .span-ans {
     position: absolute;
@@ -173,6 +161,9 @@ input[type=number] {
     animation: arrowanimright 1s step-end infinite ;
 }
 
+
+
+
 #register-btn:hover > #left {
     margin-right: 0px !important;
 }
@@ -232,6 +223,28 @@ input[type=number] {
     opacity: 1;
 }
 
+.inscrit{
+    position: absolute;
+    z-index: 90;
+
+    opacity: 0;
+
+
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    margin-top: 55px;
+    font-size: 1.5em;
+
+
+    transition: opacity 0.3s ease;
+
+}
+
+.inscrit.start {
+    opacity: 1;
+}
+
 .loader.active    {
     transform: scale(15);
 
@@ -256,4 +269,35 @@ input[type=number] {
     to {
         transform: scale(2, 50);
     }
+}
+
+@keyframes placeholderN {
+    from, to {
+        color: white;
+    }
+    50% {
+        color: rgb(189, 142, 255);
+    }
+}
+
+
+
+#textInput {
+    display: block;
+    font-size: 2.2em;
+    color: var(--white);
+    width: 17.5vw;
+    caret-color: white;
+
+    animation: placeholderN 1s infinite ease;
+}
+
+
+#textInput:focus {
+    color: white !important;
+}
+
+
+#textInput:focus::placeholder {
+    color: transparent;
 }

@@ -26,6 +26,8 @@ registerBtn.addEventListener('click', async (e) => {
     let audio = new Audio(soundRegister);
     audio.play();
 
+    document.getElementById('inscrit1').classList.add('start')
+
     const { data, error } = await db
         .from('players')
         .insert([
@@ -40,7 +42,11 @@ registerBtn.addEventListener('click', async (e) => {
 
     if (!error) registerForm.pseudonyme.value = '';
 
-    window.location.reload()
+    
+    setTimeout(() => {
+        window.location.reload()
+    }, 1500)
+    
 })
 
 

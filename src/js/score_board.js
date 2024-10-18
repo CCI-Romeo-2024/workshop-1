@@ -13,6 +13,7 @@ import wiiImg from  '../../assets/img/consoles_preview/WII.png'
 import switchImg from  '../../assets/img/consoles_preview/SWITCH.png'
 
 const scoreBoard = []
+const notifications = []
 
 const ranks = [
     '<div><span>1</span><span>ST</span></div>',
@@ -77,6 +78,17 @@ const textes = [
 ]
 
 const newNotif = (user) => {
+
+    if (notifications.length) {
+        const notif = notifications.pop()
+        
+        clearTimeout(notif.timeout)
+
+        notif.voice.cancel()
+
+        clearNotif(notif.element)
+    }
+
     const doc = document.querySelector('body')
 
     const id = randomIntFromInterval(0, 999999)
@@ -89,37 +101,51 @@ const newNotif = (user) => {
 
     const el = document.getElementById(`notif-${id}`)
 
+
+    // notifications.push({fun: })
+
     setTimeout(() => {
         el.classList.add('notif-active')
 
         let audio = new Audio(notifSound);
         audio.play();
 
-        setTimeout(() => {
-            el.classList.add('notif-end')
+        // let voice = new Audio('');
 
-            setTimeout(() => {
-                el.remove()
-            }, 200)
-        }, 2000)
+        const utterance = new SpeechSynthesisUtterance(`${user.pseudo} est dans la place !`);
+
+        // const voices = speechSynthesis.getVoices();
+
+        speechSynthesis.speak(utterance);
+
+
+        const aaa = setTimeout(() => {
+            clearNotif(el);
+
+            notifications.pop();
+
+        }, 3000)
+
+        notifications.push({element: el, timeout: aaa, voice: speechSynthesis})
     }, 200)
-
-
-
-
-
-
 }
 
-/*// Create a SpeechSynthesisUtterance
-const utterance = new SpeechSynthesisUtterance("Welcome to this tutorial!");
+function clearNotif(el) {
+    el.classList.add('notif-end')
 
-// Select a voice
-const voices = speechSynthesis.getVoices();
-utterance.voice = voices[1]; // Choose a specific voice
+    setTimeout(() => {
+        el.remove()
+    }, 200)
+}
 
-// Speak the text
-speechSynthesis.speak(utterance);*/
+setTimeout(() => {
+    newNotif({pseudo: 'Sacha', avatar: 1})
+}, 2000)
+
+setTimeout(() => {
+    newNotif({pseudo: 'Bastien', avatar: 0})
+}, 6000)
+
 
 const tableAnimation = new animateTable('#table-body', '.row', Power1.easeInOut)
 
@@ -206,24 +232,6 @@ const reOderTableHtml = (table) => {
 
     tableAnimation.animate()
 }
-
-
-
-// class notif {
-//     constructor(user) {
-//
-//     }
-//
-//
-//
-// }
-
-// const newNotif = () => {
-//
-// }
-
-
-
 
 (async () => {
     let { data: players, error } = await db
