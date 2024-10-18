@@ -138,13 +138,13 @@ function clearNotif(el) {
     }, 200)
 }
 
-setTimeout(() => {
-    newNotif({pseudo: 'Sacha', avatar: 1})
-}, 2000)
+// setTimeout(() => {
+//     newNotif({pseudo: 'Sacha', avatar: 1})
+// }, 2000)
 
-setTimeout(() => {
-    newNotif({pseudo: 'Bastien', avatar: 0})
-}, 6000)
+// setTimeout(() => {
+//     newNotif({pseudo: 'Bastien', avatar: 0})
+// }, 6000)
 
 
 const tableAnimation = new animateTable('#table-body', '.row', Power1.easeInOut)
